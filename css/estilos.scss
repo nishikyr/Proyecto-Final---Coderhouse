@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inria+Serif:ital,wght@1,700&family=Noto+Serif&display=swap');
+
+$fuente1: 'Noto Serif', serif;
+$fuente2: 'Inria Serif', serif;
+$fuente3: 'Great Vibes', cursive;
+
+$color1: #43a22a;
+$color2: #d7280d;
+$color3: #fdf5d0;
+$color4: #ba9c91;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+h3{
+    font-family: $fuente3;
+    text-decoration: underline;
+}
+
+// Encabezado //
+
+.rojo{
+    color: $color2;
+}
+.verde{
+    color: $color1;
+}
+.blanco{
+    color: $color3;
+}
+
+header{
+    padding: 0 20px;
+    margin: auto;
+    background-color: #000;
+}
+
+.navbar{
+    background-color: #000;
+    max-width: 120rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.navbar-brand{
+    font-size: 2rem !important;
+}
+
+.nav-item a{
+    color: #fff !important;
+    padding-left: 1rem !important;
+}
+
+.navbar-brand span{
+    font-family: $fuente2;
+    font-size: 35px;
+}
+
+.navbar-nav li a {
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-nav li a:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-nav li a:hover:before {
+    opacity: 1;
+}
+@media screen and (max-width:800px){
+    .navbar-brand span{
+        font-size: 25px;
+    }
+}
+
+// Video Presentación //
+
+.fondo-texto{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fondo-texto h2{
+    color: $color3;
+    font-size: 5rem;
+    font-family: $fuente3;
+}
+
+.fondo-texto h2::after{
+    content:"Benvenuto";
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    40% { content:"Bienvenido";}
+    70% { content:"Welcome";}
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.fondo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+main {
+    position: relative;
+    }
+
+
+@media screen and (max-width:800px){
+        .fondo-texto h2{
+            font-size: 40px;
+        }
+        .fondo{
+            width: 150%;
+            height: 150%;
+        }
+    }
+
+// Testimonios //
+
+.titulo-testimonio{
+    h2{
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 20px;
+    }
+}
+.testimonios_header{
+    h2{
+        font-family: $fuente1;
+        margin: 2em auto;
+        text-align: center;
+    }
+}
+
+.testimomios_contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.testimonios_caja{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.perfil-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.perfil-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;    
+}
+
+.name_user{
+    display: flex;
+    flex-direction: column;
+}
+.name_user strong{
+    color: #3d3d3d;
+    font-size: 1.3rem;
+}
+.name_user span{
+    color: #979797;
+    font-size: 1.1rem;
+}
+.reseñas{
+    color: #f3d500;
+}
+.caja-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.comentarios_clientes p{
+    color: black;
+}
+
+// Nosotros- página //
+
+.jumbotron{
+    background-image: linear-gradient(rgba(16, 19, 16, 0.5), rgba(255, 255, 255, 0.5)), url(../media/img/imagen-jumbotron2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 0 !important;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    margin-bottom: 20px;
+}
+
+.jumbotron p{
+    width: 50%;
+    margin: 30px;
+    margin-bottom: 40px;
+}
+
+.jumbotron a{
+    color: #fff;
+    font-family: $fuente2;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: $color1;
+    margin: 60px;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+.jumbotron a:hover{
+    color: #fff;
+}
+
+@media (max-width:720px) {
+    .jumbotron p{
+        width: 100%;
+        margin: auto;
+        margin: 30px 0px;
+    }
+    .jumbotron a{
+        text-align: center;
+    }
+}
+
+.container-fluid{
+    height: auto;
+    margin-bottom: 10px;
+
+}
+
+.characters{
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+.nleft1{
+    background-image: url(../media/img/historia.jpg);
+}
+
+.nleft2{
+    background-image: url(../media/img/restaurante.jpg);
+}
+
+.nleft3{
+    background-image: url(../media/img/pizzas.jpg);
+}
+
+.nleft4{
+    background-image: url(../media/img/pastas.jpg);
+}
+
+.nleft5{
+    background-image: url(../media/img/acompañamientos.jpg);
+}
+
+
+.nright{
+    padding: 20px;
+}
+
+// Reservas - Página //
+
+// form //
+
+.contenedor-formulario{
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../media/img/fondo_formulario.jpg);
+    background-size: cover;
+    padding: 20px;
+}
+
+.form-register{
+    width: 500px;
+    background-image: linear-gradient(to left top, #5f7e5d, #548351, #478944, #388d34, #219221);
+    padding: 30px;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 20px;
+    font-family: 'Calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+@media (max-width:544px) {
+    .form-register {
+        width: 400px;
+    }
+}
+@media (max-width:425px) {
+    .form-register {
+        width: 300px;
+    }
+}
+
+.form-register h4{
+    font-size: 22px;
+    font-family: $fuente1;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+.form-register h1{
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: $fuente2;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    font-family: 'calibri';
+    font-size: 20px;
+    color: white;
+    opacity: .8;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.form-register a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover{
+    color: $color2;
+    text-decoration: underline;
+}
+
+.form-register .botons{
+    width: 100%;
+    background: #24303c;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+.form-iconos{
+    text-align: center;
+}
+
+
+// Eventos - página //
+
+@mixin sizes ($text-align, $color, $font-size, $padding) {
+    text-align: $text-align;
+    color: $color;
+    font-size: $font-size;
+    padding: $padding
+}
+
+.texto-evento h2{
+    @include sizes(center, $color1, 35px, 20px);
+    text-decoration: underline;
+    font-family: $fuente2
+}
+
+.texto-evento h3{
+    @include sizes(center, $color2, 25px, 20px);
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+}
+
+.contenedor{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border: 5px solid #000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+    grid-template-areas: 
+    "img1 img2 img3 img3"
+    "img1 img4 img5 img6";
+    padding: 20px;
+    grid-gap: 20px;
+    
+}
+
+@media (max-width:570px) {
+    .contenedor {
+        grid-template-rows: 100px 100px;
+        padding: 5px;
+        grid-gap: 10px;
+    }
+}
+
+.item{
+    background-color: orange;
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+
+}
+.item:hover{
+    transform: scale(1.09);
+    transition: all 0.9s;
+    filter: grayscale(0%);
+}
+
+.item1{
+    grid-area: img1;
+    background-image: url(../media/img/grid1.jpg);
+    
+}
+.item2{
+    grid-area: img2;
+    background-image: url(../media/img/grid2.jpg);
+}
+.item3{
+    grid-area: img3;
+    background-image: url(../media/img/grid3.jpg);
+}
+.item4{
+    grid-area: img4;
+    background-image: url(../media/img/grid4.jpg);
+}
+.item5{
+    grid-area: img5;
+    background-image: url(../media/img/grid5.jpg);
+}
+.item6{
+    grid-area: img6;
+    background-image: url(../media/img/grid6.jpg);
+}
+
+
+
+
+// Pie de Pagina (Footer) //
+
+.pie-pagina{
+    width: 100%;
+    background-color: #000;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina {
+    color: #fff;
+    font-size: 20px;
+}
+.grupo-1 .box h2{
+    @extend .pie-pagina;
+    margin-bottom: 25px;
+}
+
+
+.box1 h2{
+    font-size: 30px;
+    align-items: center;
+}
+
+.logo p{
+    text-align: center;
+    font-family: $fuente2;
+}
+
+.box1{
+    padding: 45px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #000;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #00A149;
+}
+
+.box{
+    text-align: center;
+}
+
+.logo{
+    justify-content: center;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #000;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.grupo-2 span{
+    font-size: 18px;
+}
+.grupo-2 a{
+    text-decoration: none;
+    color: white;
+}
+.grupo-2 a:hover{
+    color: white;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 16px;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+        justify-content: center;
+    }
+}
+
+// Boton para subir //
+
+.subir{
+    height: 50px;
+    width: 50px;
+    background-color: #881014;
+    color: #fff;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    border-radius: 80%;
+}
